@@ -1,0 +1,30 @@
+{
+  "chainId": 4663,
+  "rpcHttp": "https://rpc.mainnet.chain.robinhood.com",
+  "rpcFallbackHttp": null,
+  "rpcWs": null,
+  "apiUrl": "https://production.data-gcp.sushi.com/api/graphql",
+  "pollMs": 2500,
+  "apiPollMs": 15000,
+  "apiFullScanMs": 1800000,
+  "healthPollMs": 60000,
+  "chunkBlocks": 2000,
+  "reorgWindowBlocks": 256,
+  "publicLaunchAtUtc": null,
+  "factories": [
+    {
+      "provider": "SUSHI_V1",
+      "address": "0x104f1ab42674565ec3df0bfebccc4186f72fa7ed",
+      "source": "https://github.com/sushi-labs/sushiswap",
+      "signature": "TokenLaunched(address,address,address,address,int24,string,string,uint16,uint256,uint64,uint16)",
+      "abi": "event TokenLaunched(address indexed creator,address indexed token,address indexed pool,address quoteToken,int24 startTick,string name,string symbol,uint16 reserveBps,uint256 reserveAmount,uint64 reserveUnlockAt,uint16 initialSushiFeeBps)"
+    },
+    {
+      "provider": "SUSHI_V2",
+      "address": "0xf1716ebf85836ffe2985db9a50dd29e5814cabe9",
+      "source": "https://github.com/sushi-labs/sushiswap/pull/2242",
+      "signature": "TokenLaunched(address,address,address,address,uint8,uint8,address,uint16,int24,uint64,uint16,string,string)",
+      "abi": "event TokenLaunched(address indexed launchCreator,address indexed token,address indexed pool,address quoteToken,uint8 liquidityMode,uint8 feeDisposition,address initialFeeReceiver,uint16 initialSushiFeeBps,int24 startTick,uint64 poolInitializedAt,uint16 observationCardinalityNext,string name,string symbol)"
+    }
+  ]
+}

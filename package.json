@@ -1,0 +1,20 @@
+{
+  "name": "sushi-launch-monitor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node src/acceptance.mjs",
+    "start": "node src/monitor.mjs",
+    "status": "node src/status.mjs",
+    "alerts": "node src/alerts.mjs",
+    "backfill": "node src/backfill.mjs"
+  },
+  "dependencies": {
+    "viem": "2.56.3"
+  }
+}
